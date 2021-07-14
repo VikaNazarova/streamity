@@ -7,6 +7,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
     color: #FFFFFF;
+    word-break: break-word;
 }
 a {
 	text-decoration: none;
@@ -18,6 +19,9 @@ a:hover {
 
 img {
 	max-width: 100%;
+}
+li {
+    list-style: none;
 }
 .h1, h1 {
     font-size: 4rem; /* 90px */
@@ -35,6 +39,11 @@ h2.h1::after {
     bottom: -20px;
     left: 0;
 }
+.h3 {
+    font-size: 3.375rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
 p {
     font-size: 1.125rem;  /* 30px */
     font-weight: 400;
@@ -45,6 +54,7 @@ p {
     /* height: 100vh; */
     padding: 5rem 0;
     overflow: hidden;
+    background: linear-gradient(130.93deg, rgba(59, 75, 224, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
 }
 .container {
     width: 90vw;
@@ -67,25 +77,61 @@ p {
     border-radius: 100px;
     padding: 10px 40px;
     font-weight: bold;
+    width: 50%;
+    text-align: center;
 }
 .btn-yellow {
     background: #FFB61D;
     border-radius: 100px;
     padding: 10px 20px;
+    /* line-height: 2.5rem; */
+}
+.btn-blue {
+    background: #3058E8;
+}
+.btn-darkblue {
+    background: #0F2E9E;
+}
+.btn-pink {
+    background: #ED7474;
+}
+.btn-aquamarine {
+    background: #26DCBB;
+}
+.btn-lightyellow {
+    background: #FFDB76;
+}
+.btn-lightblue {
+    background: #B8D4EF;
 }
 .sub-text {
     font-size: 0.875rem;
     line-height: initial;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    padding: 20px;
+}
+.bold {
+    font-weight: 700;
+}
+.right-align {
+    text-align: right;
+}
+.right-align h2.h1::after {
+    left: auto;
+    right: 0;
 }
 
 header {
     display: flex;
     justify-content: center;
     background: transparent;
-    /* position:fixed;
+    position:fixed;
+    width: 100vw;
     top:0px;
     left:0px;
-    z-index:1000; */
+    z-index:10;
+    background: linear-gradient(180deg, #fff 0%, rgb(255 255 255 / 0%) 100%);
 }
 header nav {
     display: flex;
@@ -93,27 +139,31 @@ header nav {
 }
 header a {
     font-family: Roboto;
-    font-size: 14px;
-    color: #333333;
+    font-size: 1rem;
+    color: #000;
     margin-right: 35px;
+    font-weight: 700;
 }
 header img {
-    width: 75px;
+    width: 100px;
 }
 
 #hero {
-    background: url(img/bg-1.png) bottom left no-repeat, linear-gradient(180deg, #000000 0%, #0A2480 100%);
+    background: url(img/bg-1.jpg) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 100vh;
 }
 #hero a img {
     height: 20vh;
 }
 #hero h1 {
     width: 70%;
-    margin: 15vh auto;
+    /* margin: auto auto; */
 }
 
 #about {
@@ -131,7 +181,6 @@ header img {
     padding: 0;
 }
 #products li {
-    list-style: none;
     display: flex;
     align-items: center;
 }
@@ -142,62 +191,324 @@ header img {
     margin-right: 1rem;
 }
 
-#product1 {
+#ten {
     background: linear-gradient(130.93deg, rgba(9, 32, 113, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
 }
-#product1 img.picture-column {
+#ten img.picture-column {
     bottom: -15%;
     left: 40%;
     height: 125%;
 }
 
-#product2, #product3, #product4, #product5 {
+#stacking {
     background: linear-gradient(130.93deg, rgba(59, 75, 224, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
 }
-#product2 .stack-table {
+#stacking .stack-table {
     font-weight: bold;
 }
-#product2 .stack-table > div {
+#stacking .stack-table > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 100px;
-    /* padding: 0 15px; */
     margin-bottom: 15px;
+    padding-left: 15px;
 }
-#product2 .stack-table > div:first-child {
+#stacking .stack-table > div:first-child {
     background: #849FFF;
 }
-#product2 .stack-table > div:nth-child(2) {
+#stacking .stack-table > div:nth-child(2) {
     background: #3058E8;
 }
-#product2 .stack-table > div:nth-child(3) {
+#stacking .stack-table > div:nth-child(3) {
     background: #0F2E9E;
 }
-#product2 .stack-table > div:nth-child(4) {
+#stacking .stack-table > div:nth-child(4) {
     background: #001048;
 }
-#product2 .stack-table > div > div {
+#stacking .stack-table > div > div, #stacking .stack-table > div > span {
+    width: 200px;
+    text-align: center;
+}
+
+#stacking .stack-table > div > div {
     display: flex;
     align-items: center;
+    justify-content:center;
     background: #FFFFFF;
     border-radius: 100px;
     color: #001048;
     padding: 10px 20px;
 }
-#product2 .sub-text {
-    border: 2px solid #FFFFFF;
-    border-radius: 50px;
-    padding: 20px;
+#stacking .stack-table > div > div > img {
+    width: 35px;
+    margin-right: 5px;
 }
-#product2 img.picture-column {
+#stacking .stack-table > div > span:first-child {
+    padding: 10px 20px;
+}
+#stacking img.picture-column {
     bottom: -15%;
     left: 10%;
-    height: 125%;
-    object-fit: cover;
+}
+#stacking .container > div:first-child:before {
+    content: url(img/bg-4.png);
+    position: absolute;
+    top: -10%;
+    left: 100%;
+    z-index: 1;
+}
+#stacking .container > div:nth-child(2):before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    bottom: -15%;
+    left: 15%;
+    z-index: 0;
+    background-color: #fff;
+}
+
+#wallet img.picture-column {
+    bottom: -15%;
+    left: 30%;
 }
 
 
 #marketing {
     background: linear-gradient(242.15deg, rgba(105, 164, 250, 0.9) 35.47%, rgba(48, 123, 193, 0.9) 93.18%);
+}
+#marketing img.picture-column {
+    bottom: -60%;
+    right: 20%;
+}
+#marketing li {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+#marketing li p {
+    margin: 10px;
+}
+#marketing li img {
+    width: 40px;
+}
+
+#bonus-bezop {
+    background: linear-gradient(243.53deg, rgba(82, 100, 226, 0.9) 11.15%, rgba(112, 167, 242, 0.9) 83.27%);
+}
+#bonus-bezop .sub-text p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+#bonus-bezop img.picture-column {
+    bottom: -160%;
+    right: 25%;
+    height: fit-content;
+    transform: scale3d(2.5, 0.5, 1.5);
+
+    /* bottom: -205%;
+    right: 5%;
+    height: fit-content;
+    transform: scale3d(2.5, 1.5, 1.5); */
+}
+
+#bonus-recommend {
+    background: linear-gradient(113.32deg, rgba(80, 96, 241, 0.9) 36.28%, rgba(136, 191, 255, 0.9) 87.09%);
+}
+#bonus-recommend img.picture-column {
+    bottom: -15%;
+    right: -20%;
+    height: 120%;
+    max-width: fit-content;
+}
+
+#residual {
+    background: linear-gradient(242.15deg, rgba(105, 164, 250, 0.9) 35.47%, rgba(48, 123, 193, 0.9) 93.18%);
+}
+#residual p:first-of-type {
+    font-size: 1.875rem;
+    line-height: 1.880rem;;
+}
+#residual img.picture-column {
+    bottom: -20%;
+    right: -10%;
+    height: 130%;
+    object-fit: cover;
+}
+
+#leader {
+    background: linear-gradient(242.15deg, rgba(105, 164, 250, 0.9) 35.47%, rgba(56, 34, 189, 0.9) 93.18%);
+}
+#leader table {
+    border-spacing: 5px
+}
+#leader table tr:first-of-type td {
+    font-weight: 900;
+    font-size: 1.375rem;
+}
+#leader table td {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 10px 30px;
+    text-align: center;
+}
+#leader img.picture-column {
+    bottom: -20%;
+    right: -10%;
+    height: 110%;
+    object-fit: cover;
+}
+
+#quarterly {
+    background: linear-gradient(243.58deg, rgba(83, 181, 202, 0.9) 18.49%, rgba(9, 134, 173, 0.9) 92.08%);
+}
+#quarterly .right-align::before {
+    content: url(img/bg-3.png);
+    position: absolute;
+    top: -10%;
+    right: 70%;
+    z-index: 0;
+}
+#quarterly img.picture-column {
+    bottom: -50%;
+    left: 0%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#business .btn, #business2 .btn, #business3 .btn {
+    margin-bottom: 5px;
+    text-align: center;
+}
+#business {
+    background: linear-gradient(130.93deg, rgba(46, 76, 181, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
+}
+#business img.picture-column {
+    bottom: -20%;
+    right: -20%;
+    object-fit: cover;
+}
+
+#business2 {
+    background: linear-gradient(130.93deg, rgba(82, 67, 180, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
+}
+#business2 table td {
+    background: #69A4FA;
+    border-radius: 100px;
+    padding: 3px 30px;
+    text-align: center;
+}
+#business2 img.picture-column {
+    bottom: -40%;
+    right: -30%;
+    object-fit: cover;
+    height: 120%;
+}
+
+#business3 {
+    background: linear-gradient(130.93deg, rgba(5, 26, 101, 0.9) 11.33%, rgba(104, 170, 198, 0.837) 101.33%);
+}
+#business3 img.picture-column {
+    bottom: 10%;
+    left: 10%;
+    height: 70%;
+    max-width: fit-content;
+}
+
+#contacts {
+    background: linear-gradient(430deg, rgba(185, 84, 202, 0.9) -2.84%, rgba(21, 126, 251, 0.9) 96.81%);
+}
+#contacts .two-column {
+    grid-gap: 150px;
+    margin-bottom: 3rem;
+}
+#contacts .contact-info {
+    background: rgba(58, 139, 239, 0.34);
+    border-radius: 62px;
+    padding: 50px;
+    margin-top: 2rem;
+}
+#contacts .bold {
+    font-size: 1.5rem;
+}
+#contacts .contact-info p {
+    line-height: 1.8rem;
+}
+#contacts ul a {
+    font-size: 1.625rem;
+    line-height: 1.8rem;
+    color: #FFFFFF;
+}
+#contacts li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#contacts li img {
+    width: 40px;
+    margin-right: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+    #leader img.picture-column, #quarterly img.picture-column {
+        height: auto;
+    }
+    #leader table td {
+        font-size: 1rem;
+    }
+    #marketing img.picture-column {
+        bottom: -20%
+    }
+    #bonus-bezop img.picture-column {
+        bottom: -130%;
+    }
+    #bonus-recommend img.picture-column {
+        bottom: -10%;
+        left: 0%;
+        height: 90%;
+        max-width: fit-content;
+    }
+    #business img.picture-column {
+        bottom: -10%;
+        right: -60%;
+        max-width: fit-content;
+        height: 70%;
+    }
+    #business2 img.picture-column {
+        bottom: -30%;
+        left: -20%;
+        height: 100%;
+        max-width: fit-content;
+    }
+    #business3 img.picture-column {
+        bottom: 20%;
+        left: -10%;
+        height: 40%;
+        max-width: fit-content;
+    }
+}
+@media screen and (max-width: 768px) {
+    .h1, h1 {
+        font-size: 3rem;
+    }
+    .module {
+        padding: 5rem 5%;
+    }
+    .container {
+        width: auto;
+        margin: 0;
+    }
+    .two-column {
+        grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    }
+    .two-column img.picture-column {
+        position: initial;
+    }
 }

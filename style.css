@@ -104,6 +104,17 @@ p {
 .btn-lightblue {
     background: #B8D4EF;
 }
+.btn-big {
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #D9F1FD;
+    background: linear-gradient(180deg, #8BE0FF 0%, #083457 100%);
+    border-radius: 69px;  
+    padding: 40px; 
+}
 .sub-text {
     font-size: 0.875rem;
     line-height: initial;
@@ -158,12 +169,12 @@ header img {
     text-align: center;
     height: 100vh;
 }
-#hero a img {
+/* #hero a img {
     height: 20vh;
-}
-#hero h1 {
-    width: 70%;
-    /* margin: auto auto; */
+} */
+#hero div {
+    transform: rotate(-1.74deg);
+
 }
 
 #about {
@@ -193,6 +204,9 @@ header img {
 
 #ten {
     background: linear-gradient(130.93deg, rgba(9, 32, 113, 0.9) -1.53%, rgba(104, 170, 198, 0.837) 101.33%);
+}
+#ten li {
+    margin-bottom: 10px;
 }
 #ten img.picture-column {
     bottom: -15%;

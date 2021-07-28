@@ -158,6 +158,17 @@ header a {
 header img {
     width: 100px;
 }
+#toggle {
+    display: none;
+    position: absolute;
+    left: -100%;
+    top: -100%;
+}
+label {
+    display: none;
+    font-size: 2.5rem;
+    padding: 5px 15px;
+}
 
 #hero {
     background: url(img/bg-1.jpg) no-repeat;
@@ -475,7 +486,7 @@ header img {
         height: auto;
     }
     #leader table td {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     #marketing img.picture-column {
         bottom: -20%
@@ -508,20 +519,13 @@ header img {
         max-width: fit-content;
     }
 }
-#toggle {
-    display: none;
-    position: absolute;
-    left: -100%;
-    top: -100%;
-}
-label {
-    display: none;
-    font-size: 2.5rem;
-    padding: 5px 15px;
-}
+
 @media screen and (max-width: 768px) {
     .h1, h1 {
-        font-size: 3rem;
+        font-size: 2.7rem;
+    }
+    .h3 {
+        font-size: 2.5rem;
     }
     .module {
         padding: 5rem 5%;
@@ -563,9 +567,42 @@ label {
     }
     .btn {
         display: block;
+        margin-bottom: 10px;
     }
     .btn-big {
         font-size: 3.8rem;
+    }
+
+    #ten img.picture-column {
+        height: auto;
+    }
+    #stacking img.picture-column, 
+    #stacking .container > div:nth-child(2):before, 
+    #marketing img.picture-column, 
+    #bonus-recommend img.picture-column,
+    #leader img.picture-column,
+    #business img.picture-column,
+    #business2 img.picture-column,
+    #business3 img.picture-column {
+        display: none;
+    }
+    #pay .two-column img.picture-column {
+        transform: rotate(5deg);
+    }
+    #bonus-bezop img.picture-column {
+        transform: none;
+    }
+    #leader table td {
+        padding: 5px 10px;
+    }
+    #contacts ul {
+        padding: 0;
+    }
+    #contacts li img {
+        margin-right: 25px;
+    }
+    #contacts ul a {
+        font-size: 1.4rem;
     }
 
 }
